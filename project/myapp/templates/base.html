@@ -62,7 +62,7 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a href="#">logout</a>
+                        <a href="{% url 'logout' %}">logout</a>
                     </li>
 
                 </ul>
@@ -76,7 +76,7 @@
             <div class="col-sm-3 col-md-2 sidebar">
 
                 <ul class="nav nav-sidebar">
-
+                    {% if user.is_authenticated %}
                     <li>
                         <a href="{% url 'myapp:index' %}">myapp</a>
                     </li>
@@ -86,7 +86,7 @@
                     <li>
                         <a href="{% url 'myapp:test' %}">test3</a>
                     </li>
-
+                    {% endif %}
                 </ul>
 
             </div>
