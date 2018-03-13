@@ -5,3 +5,7 @@ class IndexView(generic.TemplateView):
 
 class Index2View(generic.TemplateView):
     template_name = 'myapp/index2.html'
+
+
+class TestView(generic.TemplateView):
+    template_name = 'myapp/test.html'
